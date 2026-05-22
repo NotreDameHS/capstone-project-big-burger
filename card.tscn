@@ -18,3 +18,8 @@
 [node name="Card" type="Sprite2D" unique_id=73124919]
 script = ExtResource("1_kikvd")
 cards = Array[CompressedTexture2D]([ExtResource("2_5biq5"), ExtResource("3_kicxe"), ExtResource("4_oaj0s"), ExtResource("5_lbpyt"), ExtResource("6_h8qr4"), ExtResource("7_kvrdl"), ExtResource("8_soe5h"), ExtResource("9_cd7f1"), ExtResource("10_3jvtn"), ExtResource("11_astg2"), ExtResource("12_vhwgv"), ExtResource("13_d3p2n"), ExtResource("14_xgvo5")])
+
+[node name="Timer" type="Timer" parent="." unique_id=2136715834]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
