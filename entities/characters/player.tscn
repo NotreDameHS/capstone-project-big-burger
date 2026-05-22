@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://wyw12odlrigd"]
+
+[ext_resource type="Script" uid="uid://ceugbtbkodl3e" path="res://entities/characters/player.gd" id="1_f5hqe"]
+[ext_resource type="Texture2D" uid="uid://b8dyip61mhnvo" path="res://kenney_playing-cards-pack/PNG/Cards (large)/card_clubs_Q.png" id="2_d7owf"]
+
+[node name="Player" type="Area2D" unique_id=820598687]
+script = ExtResource("1_f5hqe")
+
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1857829437]
+texture = ExtResource("2_d7owf")

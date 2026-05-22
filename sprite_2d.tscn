@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bpr7iox8lku2g"]
+
+[ext_resource type="Texture2D" uid="uid://2ers0ron570u" path="res://kenney_playing-cards-pack/PNG/Cards (large)/card_clubs_02.png" id="1_f7cmv"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1749578521]
+texture = ExtResource("1_f7cmv")

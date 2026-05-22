@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://blemmmpkk5c3y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wusub"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=419754835]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1211186917]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 49.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1202553077]
+layout_mode = 2
+alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer" unique_id=947660293]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wusub")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Panel" unique_id=119259446]
+layout_mode = 0
+offset_left = -128.0
+offset_right = -4.0
+offset_bottom = 49.0
+text = "Money Counter:
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Panel" unique_id=382769178]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/Panel/HBoxContainer" unique_id=809693943]
+layout_mode = 2
