@@ -13,3 +13,8 @@ scale = Vector2(3, 3)
 position = Vector2(645, 372)
 
 [node name="CanvasLayer" parent="." unique_id=419754835 instance=ExtResource("3_feb5d")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2023330792]
+position = Vector2(650, 362)
+scale = Vector2(2, 2)
+zoom = Vector2(0.9, 0.9)

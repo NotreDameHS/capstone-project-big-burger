@@ -1,24 +1,13 @@
-extends Area2D
-var max_speed := 600.0
-var velocity := Vector2(0, 0)
-var steering_factor := 10.0
+extends CharacterBody2D
+@export var speed := 300.0
+@export var rotation_speed := 10.0
 
 
 
-func _process(delta: float) -> void:
-	var direction := Vector2(0, 0)
-	direction.x = Input.get_axis("left", "right")
-	direction.y = Input.get_axis("up", "down")
-
-	if direction.length() > 1.0:
-		direction = direction.normalized()
-	
-	if velocity.length() > 0.0:
-		rotation = velocity.angle()
-	
-	var desired_velocity := direction * max_speed
-	var steering_vector := desired_velocity - velocity
-	
-	velocity += steering_vector * steering_factor * delta
-	position += velocity * delta
-	pass
+func _physics_process(delta: float) -> void:
+	var direction = Input.get_vector("left", "right", "up", "down")
+	velocity = direction * speed
+	move_and_slide()
+	if direction.length() > 0:
+		var target_angle = direction.angle()
+		rotation = lerp_angle(rotation, target_angle, rotation_speed * delta)
