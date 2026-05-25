@@ -24,7 +24,7 @@ func blackjack() -> void:
 	var dealer_card_1 : int
 	var dealer_card_2 : int
 	
-	
+		
 	pass
 	
 
