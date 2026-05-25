@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b8mj7py2h60ow" path="res://2D Top Down Pixel Art Tileset Casino/kenney_robot-pack/PNG/Top view/body_3Dyellow.png" id="2_d7owf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7owf"]
-size = Vector2(40, 35)
+size = Vector2(74, 62)
 
 [node name="Player" type="CharacterBody2D" unique_id=79895985]
 collision_mask = 2
@@ -15,5 +15,4 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_d7owf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=830650330]
-position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_d7owf")

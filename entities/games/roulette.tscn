@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dwxw65v06k171"]
+
+[ext_resource type="Script" uid="uid://bndqw4tbopur2" path="res://entities/games/roulette.gd" id="1_javfr"]
+[ext_resource type="Texture2D" uid="uid://b85jh82aypxns" path="res://entities/games/roulette_table.png" id="2_oudjn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mavtb"]
+radius = 903.80524
+
+[node name="Roulette" type="Node2D" unique_id=1886602851]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_javfr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=320716554]
+texture = ExtResource("2_oudjn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1241347478]
+scale = Vector2(0.4, 0.4)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=216247030]
+position = Vector2(0, 6.2499995)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("CircleShape2D_mavtb")
