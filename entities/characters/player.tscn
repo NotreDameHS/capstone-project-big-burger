@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wyw12odlrigd"]
 
 [ext_resource type="Script" uid="uid://ceugbtbkodl3e" path="res://entities/characters/player.gd" id="1_f5hqe"]
-[ext_resource type="Texture2D" uid="uid://b8mj7py2h60ow" path="res://2D Top Down Pixel Art Tileset Casino/kenney_robot-pack/PNG/Top view/body_3Dyellow.png" id="2_d7owf"]
+[ext_resource type="Texture2D" uid="uid://b8mj7py2h60ow" path="res://assets/textures/2D Top Down Pixel Art Tileset Casino/kenney_robot-pack/PNG/Top view/body_3Dyellow.png" id="2_d7owf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7owf"]
 size = Vector2(74, 62)

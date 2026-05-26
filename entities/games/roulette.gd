@@ -7,7 +7,6 @@ var green_num := [0]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	start_wait()
 	pass # Replace with function body.
 
 func start_wait() -> void:
@@ -15,10 +14,22 @@ func start_wait() -> void:
 	start_bet()
 	pass
 
-func start_bet():
-	var bet = randi_range(0, 36)
+func start_bet() -> void:
+	var outcome = randi_range(0, 36)
+	print (outcome)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	pass
+
+
+
+
+# in process check if the "E to ineract button is pressed
+# when its pressed open betting ui (red, black, green)
+# possibly call start_wait() to handle betting button inputs
+# save what colour button was pressed as a var
+# in start bet after random number is found check if list matches var
+#

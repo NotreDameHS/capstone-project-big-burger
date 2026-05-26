@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://xd0unw4mgyda"]
+
+[ext_resource type="Script" uid="uid://bn7manobj68la" path="res://coin_flip.gd" id="1_aocdp"]
+[ext_resource type="Texture2D" uid="uid://23m04j6mbth5" path="res://entities/games/images-removebg-preview.png" id="1_ip0qb"]
+
+[node name="Coin Flip" type="Node2D" unique_id=2020917289]
+script = ExtResource("1_aocdp")
+
+[node name="Timer" type="Timer" parent="." unique_id=1777846508]
+wait_time = 1.6999999999999995
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1790400315]
+texture = ExtResource("1_ip0qb")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
