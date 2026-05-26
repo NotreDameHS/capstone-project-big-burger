@@ -1,5 +1,18 @@
 [gd_scene format=3 uid="uid://cdg06snxexn78"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wf015"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2lfg"]
+bg_color = Color(2.2043883e-05, 0.64436024, 0.13206375, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg4cr"]
+bg_color = Color(0.7647059, 0, 0, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1509062674]
 
 [node name="Panel" type="Panel" parent="." unique_id=1534823519]
@@ -20,35 +33,85 @@ offset_bottom = 40.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer" unique_id=2129853115]
 layout_mode = 2
+theme_override_constants/separation = 0
 
 [node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer" unique_id=1095358682]
-custom_minimum_size = Vector2(75, 0)
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=2104946202]
-custom_minimum_size = Vector2(150, 100)
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=987416984]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1160968448]
-custom_minimum_size = Vector2(50, 50)
+[node name="Panel" type="Panel" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=14209388]
+custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wf015")
 
-[node name="Panel" type="Panel" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1609175355]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel" unique_id=580614452]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 0
-offset_right = 149.0
-offset_bottom = 100.0
+[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel" unique_id=1568579841]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "UHH"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Control2" type="Control" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=939550092]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 275)
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1655282339]
+custom_minimum_size = Vector2(10, 75)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel2" unique_id=1148446628]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+
+[node name="Control3" type="Control" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel2/HBoxContainer" unique_id=385229601]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel2/HBoxContainer" unique_id=1171715490]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Control2" type="Control" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel2/HBoxContainer/VBoxContainer" unique_id=317713493]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel2/HBoxContainer/VBoxContainer" unique_id=1002317298]
+custom_minimum_size = Vector2(0, -100)
+layout_mode = 2
+placeholder_text = "Set Amount"
+alignment = 1
+virtual_keyboard_enabled = false
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel2/HBoxContainer/VBoxContainer" unique_id=1690516029]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel2/HBoxContainer/VBoxContainer" unique_id=1415251719]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v2lfg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tg4cr")
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel2/HBoxContainer" unique_id=1399989385]
 layout_mode = 2
 
 [node name="Control2" type="Control" parent="Panel/MarginContainer/HBoxContainer" unique_id=1780717083]
-custom_minimum_size = Vector2(65, 0)
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
