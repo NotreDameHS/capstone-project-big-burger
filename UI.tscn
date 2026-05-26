@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://blemmmpkk5c3y"]
 
+[ext_resource type="Script" uid="uid://t1vwtbw88py2" path="res://ui.gd" id="1_b3bc3"]
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=419754835]
+script = ExtResource("1_b3bc3")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1211186917]
 custom_minimum_size = Vector2(150, 50)

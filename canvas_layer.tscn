@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://cdg06snxexn78"]
 
+[ext_resource type="Script" uid="uid://dw1spfrb63plu" path="res://crash_ui.gd" id="1_v2lfg"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wf015"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wf015"]
+font_size = 30
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2lfg"]
 bg_color = Color(2.2043883e-05, 0.64436024, 0.13206375, 1)
@@ -13,7 +18,8 @@ corner_radius_bottom_left = 4
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg4cr"]
 bg_color = Color(0.7647059, 0, 0, 1)
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=1509062674]
+[node name="Crash UI" type="CanvasLayer" unique_id=1509062674]
+script = ExtResource("1_v2lfg")
 
 [node name="Panel" type="Panel" parent="." unique_id=1534823519]
 custom_minimum_size = Vector2(300, 500)
@@ -60,7 +66,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "UHH"
+text = "1.05"
+label_settings = SubResource("LabelSettings_wf015")
 horizontal_alignment = 1
 vertical_alignment = 1
 
