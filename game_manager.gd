@@ -1,8 +1,8 @@
 extends Node2D
 
-signal money_change(amount:float)
+signal money_amount(amount:float)
 
-@export var money_start: float
+@export var money_start : float
 
 func _ready() -> void:
-	money_change.emit(money_start)
+	money_amount.emit(money_start)
