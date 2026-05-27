@@ -1,6 +1,8 @@
 extends Node2D
 @export var amount: int
 
+@onready var crash_ui : Node
+
 signal crash_multiplier(value:float)
 
 
@@ -10,6 +12,8 @@ func _ready() -> void:
 	var crash_mult = crash()
 	print(crash_mult)
 	crash_multiplier.emit(crash_mult)
+	crash_ui = get_node("../Crash UI")
+	crash_ui.crash_mind.connect(crash_transfer)
 	pass
 func crash():
 	loop_count = 0
@@ -23,7 +27,7 @@ func crash():
 	return snapped(num_set.min(),0.01)
 	
 
-func _on_timer_timeout() -> void:
+func crash_transfer() -> void:
 	var crash_mult = crash()
 	print(crash_mult)
 	crash_multiplier.emit(crash_mult)
