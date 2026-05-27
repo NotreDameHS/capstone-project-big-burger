@@ -4,5 +4,9 @@ extends CanvasLayer
 
 
 func _ready() -> void:
-	quota.text = str(GameManager.money_start)
+	GameManager.money_signal.connect(money)
+	pass
+
+func money(amount:int):
+	quota.text = "Quota:" + "\n" + "$" + str(amount) + " / $100"
 	pass

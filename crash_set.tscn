@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bmxf1mdt3aw7j" path="res://crash_set.gd" id="1_jraah"]
 
-[node name="Crash set" type="Node2D" unique_id=1393452546]
+[node name="Crash Set" type="Node2D" unique_id=1393452546]
 script = ExtResource("1_jraah")
 amount = 8
 
 [node name="Timer" type="Timer" parent="." unique_id=941064523]
+wait_time = 3.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

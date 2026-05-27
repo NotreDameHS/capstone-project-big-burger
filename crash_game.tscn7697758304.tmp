@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://djct6cksnt0oo"]
+
+[ext_resource type="PackedScene" uid="uid://dlugousw5nyt8" path="res://crash_set.tscn" id="1_672hf"]
+[ext_resource type="PackedScene" uid="uid://cdg06snxexn78" path="res://canvas_layer.tscn" id="2_a5ktg"]
+
+[node name="Crash Game" type="Node2D" unique_id=980865877]
+
+[node name="Crash Set" parent="." unique_id=1393452546 instance=ExtResource("1_672hf")]
+
+[node name="Crash UI" parent="." unique_id=1509062674 instance=ExtResource("2_a5ktg")]

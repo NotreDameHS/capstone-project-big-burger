@@ -1,10 +1,15 @@
 extends Node2D
 @export var amount: int
 
+signal crash_multiplier(value:float)
+
+
 var loop_count := 0
 
 func _ready() -> void:
-	crash()
+	var crash_mult = crash()
+	print(crash_mult)
+	crash_multiplier.emit(crash_mult)
 	pass
 func crash():
 	loop_count = 0
@@ -19,5 +24,7 @@ func crash():
 	
 
 func _on_timer_timeout() -> void:
-	print(crash())
+	var crash_mult = crash()
+	print(crash_mult)
+	crash_multiplier.emit(crash_mult)
 	pass # Replace with function body.

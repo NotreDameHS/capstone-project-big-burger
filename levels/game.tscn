@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://ce0lohe4j7vna"]
 
 [ext_resource type="PackedScene" uid="uid://crfbj1y5mxitk" path="res://levels/Background.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://dupoe8ugicht6" path="res://levels/game.gd" id="1_vhr6a"]
 [ext_resource type="PackedScene" uid="uid://wyw12odlrigd" path="res://entities/characters/player.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://blemmmpkk5c3y" path="res://UI.tscn" id="3_feb5d"]
 
 [node name="Game" type="Node2D" unique_id=694441275]
+script = ExtResource("1_vhr6a")
 
 [node name="background" parent="." unique_id=1249691877 instance=ExtResource("1_80nbo")]
 scale = Vector2(3, 3)
@@ -18,3 +20,9 @@ position = Vector2(645, 372)
 position = Vector2(650, 362)
 scale = Vector2(2, 2)
 zoom = Vector2(0.9, 0.9)
+
+[node name="Timer" type="Timer" parent="." unique_id=763020190]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
