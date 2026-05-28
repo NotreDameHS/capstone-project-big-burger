@@ -7,12 +7,15 @@ extends CanvasLayer
 @onready var crash_ui = Node
 @onready var player_bet : float
 @onready var crash_multiplier : float
-@onready var counter : float
-
+@onready var counter : float = 1
+@onready var game_started : bool
+@onready var takeout_value : bool = false
+@onready var player_next_bet: float
 signal crash_mind()
 
 
 func _ready() -> void:
+	crash_multiplier_label.text = "CRASH!"
 	print(GameManager.money_amount)
 	await get_tree().process_frame
 	crash_delay()
@@ -27,7 +30,9 @@ func print_input(text: String):
 	var filter := ""
 	var dot_used := false
 	var valid = true
+	
 	for num in text:
+
 		if num.is_valid_float():
 			filter += num
 			valid = true
@@ -58,28 +63,49 @@ func print_input(text: String):
 		player_input.placeholder_text = "U Dont Have that Bruh"
 		player_bet = 0.0
 		return
+	if game_started:
+		player_next_bet = value
+		print("saved for next bet")
+		return
 		
 	crash_mind.emit()
 	player_bet = value
 	
 
 func crash(mult : float):
-	print("hi"+ str(mult))
-	crash_multiplier_label.text = str(mult)
 	crash_multiplier = mult
 	pass
 	
 func start_game():
+	if takeout_value:
+		print("cant")
+		return
+	if game_started:
+		takeout_value = true
+		print("Multiplier: " + str(counter))
+		return
+		
 	if player_bet is float and player_bet != 0.0:
+		crash_mind.emit()
+		game_started = true
+		print(game_started)
 		print(player_bet)
 		await countdown()
 		while counter < crash_multiplier:
-			print("test")
 			counter += snapped(randf_range(0.01, 0.09), 0.01)
+			counter = snapped(counter,0.01)
 			crash_multiplier_label.text = str(counter)
 			await get_tree().create_timer(0.1).timeout
 		if counter > crash_multiplier:
 			crash_multiplier_label.text = str(crash_multiplier)
+			counter = crash_multiplier
+		await get_tree().create_timer(0.2).timeout
+		if counter == crash_multiplier:
+			print("1test")
+			game_started = false
+			takeout_value = false
+			counter = 1
+			player_bet = player_next_bet
 	else: 
 		return
 	pass
