@@ -1,10 +1,10 @@
 extends Node2D
 
 signal timer()
+signal timer_left()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GameManager.terminate_game.connect(stat)
-	
 	pass # Replace with function body.
 
 

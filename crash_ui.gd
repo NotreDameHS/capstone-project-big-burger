@@ -44,11 +44,13 @@ func print_input(text: String):
 			valid = false
 			break
 	if not valid:
+		print("1")
 		player_input.text = ""
 		player_input.placeholder_text = "Numbers Only"
 		player_bet = 0.0
 		return
 	if text == "":
+		print("2")
 		player_input.placeholder_text = "Set Amount"
 		player_bet = 0.0
 		return
@@ -59,6 +61,7 @@ func print_input(text: String):
 		text = filter
 	var value : float = text.to_float()
 	if value > GameManager.money_amount:
+		print("3")
 		player_input.text = ""
 		player_input.placeholder_text = "U Dont Have that Bruh"
 		player_bet = 0.0
@@ -84,8 +87,9 @@ func start_game():
 		takeout_value = true
 		print("Multiplier: " + str(counter))
 		return
-		
+	print(player_bet)
 	if player_bet is float and player_bet != 0.0:
+		print("works here")
 		crash_mind.emit()
 		game_started = true
 		print(game_started)
@@ -105,7 +109,10 @@ func start_game():
 			game_started = false
 			takeout_value = false
 			counter = 1
-			player_bet = player_next_bet
+			if player_next_bet != 0.0:
+				player_bet = player_next_bet
+				player_next_bet = 0.0
+			else: player_bet = player_bet
 	else: 
 		return
 	pass

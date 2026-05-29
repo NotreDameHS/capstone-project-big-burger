@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bv47mjqa4ck60"]
 
-[ext_resource type="Script" uid="uid://dvy7ws0quppsv" path="res://card.gd" id="1_kikvd"]
+[ext_resource type="Script" uid="uid://dvy7ws0quppsv" path="res://entities/games/card.gd" id="1_kikvd"]
 [ext_resource type="Texture2D" uid="uid://bethpd4s5a5pd" path="res://assets/textures/kenney_playing-cards-pack/PNG/Cards (large)/card_diamonds_02.png" id="2_5biq5"]
 [ext_resource type="Texture2D" uid="uid://bvchfo5vxx3h7" path="res://assets/textures/kenney_playing-cards-pack/PNG/Cards (large)/card_diamonds_03.png" id="3_kicxe"]
 [ext_resource type="Texture2D" uid="uid://3gtol8iono1a" path="res://assets/textures/kenney_playing-cards-pack/PNG/Cards (large)/card_diamonds_04.png" id="4_oaj0s"]

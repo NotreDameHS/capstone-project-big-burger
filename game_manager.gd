@@ -6,7 +6,7 @@ signal terminate_game(state:bool)
 signal timer
 
 @onready var game = get_node("/root/Game")
-var money_start : float = 100
+var money_start : float = 200
 var money_amount : float
 
 func _ready() -> void:
