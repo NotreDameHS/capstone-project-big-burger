@@ -1,32 +1,52 @@
 extends Node2D
 
 signal money_signal(amount:float)
-signal timer_signal(amount:float)
+signal timer_signal(amount:int)
 signal terminate_game(state:bool)
-signal timer
+
+
 
 @onready var game = get_node("/root/Game")
+@onready var crash = get_node("/root/Game/Area2D")
 var money_start : float = 200
 var money_amount : float
+var quota : float = 100
+var amount : float
 
 func _ready() -> void:
 	money_amount = money_start
 	if game:
 		game.timer.connect(quota_check)
+		crash.moneymulta.connect(money_multiply)
+		crash.moneyremoveda.connect(money_removed)
 		print(money_start)
 	
 	
 func _process(delta: float) -> void:
 	#money_amount -= 1
-	money_signal.emit(money_amount)
+	money_signal.emit(money_amount,quota)
 	
 	pass # Replace with function body.
 
-func quota_check():
-	if money_amount <= 110:
-		print("game over")
-		terminate_game.emit()
-	else:
-		print("round 2")
+func money_multiply(mult: float, player_bet: float):
+	amount = mult * player_bet
+	money_amount += amount
+	pass
+func money_removed(player_bet:float):
+	print("this is being removed ", player_bet)
+	money_amount -= player_bet
+	print("this is amount", amount)
+	pass
+
+func quota_check(clock : int):
+	timer_signal.emit(clock)
+	
+	if clock <= 0:
+		if money_amount <= quota:
+			print("game over")
+			terminate_game.emit()
+		else:
+			quota = money_amount * 1.2
+			print("round 2")
 	pass
 	

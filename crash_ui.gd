@@ -11,10 +11,15 @@ extends CanvasLayer
 @onready var game_started : bool
 @onready var takeout_value : bool = false
 @onready var player_next_bet: float
+@onready var ls := crash_multiplier_label.label_settings
+
 signal crash_mind()
+signal moneymult()
+signal moneyremove()
 
 
 func _ready() -> void:
+	ls.font_color = Color.WHITE
 	crash_multiplier_label.text = "CRASH!"
 	print(GameManager.money_amount)
 	await get_tree().process_frame
@@ -84,11 +89,17 @@ func start_game():
 		print("cant")
 		return
 	if game_started:
+		ls.font_color = Color.GREEN
+		crash_multiplier_label.label_settings = ls
 		takeout_value = true
 		print("Multiplier: " + str(counter))
+		moneymult.emit(counter,player_bet)
 		return
 	print(player_bet)
 	if player_bet is float and player_bet != 0.0:
+		moneyremove.emit(player_bet)
+		ls.font_color = Color.WHITE
+		crash_multiplier_label.label_settings = ls
 		print("works here")
 		crash_mind.emit()
 		game_started = true
@@ -100,6 +111,9 @@ func start_game():
 			counter = snapped(counter,0.01)
 			crash_multiplier_label.text = str(counter)
 			await get_tree().create_timer(0.1).timeout
+		if takeout_value != true:
+			ls.font_color = Color.RED
+			crash_multiplier_label.label_settings = ls
 		if counter > crash_multiplier:
 			crash_multiplier_label.text = str(crash_multiplier)
 			counter = crash_multiplier
