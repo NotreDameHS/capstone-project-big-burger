@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dlugousw5nyt8"]
 
-[ext_resource type="Script" uid="uid://bmxf1mdt3aw7j" path="res://crash_set.gd" id="1_jraah"]
+[ext_resource type="Script" uid="uid://bmxf1mdt3aw7j" path="res://entities/games/crash_set.gd" id="1_jraah"]
 
 [node name="Crash Set" type="Node2D" unique_id=1393452546]
 script = ExtResource("1_jraah")

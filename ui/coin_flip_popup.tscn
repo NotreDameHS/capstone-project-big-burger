@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ckjurih1kwxwq"]
+
+[ext_resource type="PackedScene" uid="uid://cfl3a7vu3ubtb" path="res://ui/crash_game_popup.tscn" id="1_iuytk"]
+[ext_resource type="Script" uid="uid://b5hlgwnufe0vy" path="res://ui/coin_flip_popup.gd" id="2_pygpm"]
+
+[node name="Coin Flip popup" unique_id=1340101897 instance=ExtResource("1_iuytk")]
+script = ExtResource("2_pygpm")

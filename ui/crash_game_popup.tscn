@@ -1,20 +1,22 @@
 [gd_scene format=3 uid="uid://cfl3a7vu3ubtb"]
 
-[ext_resource type="Script" uid="uid://d2g74hrfse7lr" path="res://area_2d.gd" id="1_dl81w"]
-[ext_resource type="Texture2D" uid="uid://23m04j6mbth5" path="res://entities/games/images-removebg-preview.png" id="1_gf172"]
+[ext_resource type="Script" uid="uid://d2g74hrfse7lr" path="res://ui/crash_game_popup.gd" id="1_dl81w"]
+[ext_resource type="Texture2D" uid="uid://c5hcqvlj51eqt" path="res://assets/rocket.png" id="2_750jw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dl81w"]
-radius = 143.0035
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6fr8f"]
+radius = 101.0
+height = 358.0
 
 [node name="Area2D" type="Area2D" unique_id=1340101897]
 monitorable = false
 script = ExtResource("1_dl81w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=992243417]
-shape = SubResource("CircleShape2D_dl81w")
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_6fr8f")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1357468826]
-texture = ExtResource("1_gf172")
+texture = ExtResource("2_750jw")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
