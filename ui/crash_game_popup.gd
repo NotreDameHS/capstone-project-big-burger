@@ -1,6 +1,6 @@
 extends Area2D
 
-var scene = preload("res://crash_game.tscn")
+var scene = preload("res://entities/games/crash_game.tscn")
 var game : Node
 signal moneymulta
 signal moneyremoveda
