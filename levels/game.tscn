@@ -28,4 +28,6 @@ autostart = true
 [node name="Area2D" parent="." unique_id=1340101897 instance=ExtResource("5_30w35")]
 position = Vector2(961, 335)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1329757493]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
