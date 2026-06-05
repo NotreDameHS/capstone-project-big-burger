@@ -23,7 +23,7 @@ func _on_timer_timeout() -> void:
 	clock -= 1
 	if clock <= 0:
 		timer.emit(clock)
-		time_left += 30
+		time_left += 60
 		clock = time_left
 		return
 	timer.emit(clock)
