@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://dknk7lmh63yx7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1s85s"]
+font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6p8y"]
+bg_color = Color(3.465414e-06, 0.7403982, 0.23743263, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ak2if"]
+bg_color = Color(0.7914937, 0, 0.18040639, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Title Screen" type="CanvasLayer" unique_id=1303278956]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1947297351]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1656578538]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel" unique_id=1742090286]
+layout_mode = 0
+offset_right = 1144.0
+offset_bottom = 644.0
+theme_override_constants/separation = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/HBoxContainer" unique_id=1402062707]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer" unique_id=1856382027]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer" unique_id=846039735]
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer/Panel" unique_id=369822545]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer/Panel/VBoxContainer" unique_id=1528082082]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Project Jackpot"
+label_settings = SubResource("LabelSettings_1s85s")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer/Panel/VBoxContainer" unique_id=1760132007]
+layout_mode = 2
+text = "By: Zane & Eugene"
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer" unique_id=1099716255]
+custom_minimum_size = Vector2(0, 340)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/Panel/HBoxContainer" unique_id=322808435]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/Panel/HBoxContainer" unique_id=673085269]
+custom_minimum_size = Vector2(395, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2" unique_id=1889827401]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2" unique_id=842961383]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2/PanelContainer" unique_id=1580563348]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2/PanelContainer/VBoxContainer" unique_id=1118562298]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2/PanelContainer/VBoxContainer" unique_id=708223937]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_v6p8y")
+text = "PLAY"
+
+[node name="Control2" type="Control" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2/PanelContainer/VBoxContainer" unique_id=1098020601]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2/PanelContainer/VBoxContainer" unique_id=1606512499]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_ak2if")
+text = "QUIT"
+
+[node name="Control2" type="Control" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2" unique_id=1971331425]
+custom_minimum_size = Vector2(0, 145)
+layout_mode = 2
