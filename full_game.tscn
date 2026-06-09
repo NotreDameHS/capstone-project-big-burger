@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://domu87de4xrh4"]
+
+[ext_resource type="PackedScene" uid="uid://dknk7lmh63yx7" path="res://title_screen.tscn" id="1_3h4wb"]
+
+[node name="Full Game" type="Node2D" unique_id=1443265069]
+
+[node name="Title Screen" parent="." unique_id=1303278956 instance=ExtResource("1_3h4wb")]

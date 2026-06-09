@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c8lnaxvrfjgab"]
+
+[ext_resource type="PackedScene" uid="uid://xd0unw4mgyda" path="res://entities/games/coin_flip.tscn" id="1_ynjq6"]
+[ext_resource type="PackedScene" uid="uid://xgtaxogfk0fi" path="res://ui/coin_flip_ui.tscn" id="2_sjhu2"]
+
+[node name="Coin Flip Game" type="Node2D" unique_id=2134751325]
+
+[node name="Coin Flip Set" parent="." unique_id=2020917289 instance=ExtResource("1_ynjq6")]
+scale = Vector2(5, 5)
+
+[node name="Coin Flip UI" parent="." unique_id=762299749 instance=ExtResource("2_sjhu2")]

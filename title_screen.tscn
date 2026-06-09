@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dknk7lmh63yx7"]
 
+[ext_resource type="Script" uid="uid://n2xmd24t8aqp" path="res://title_screen.gd" id="1_v6p8y"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_1s85s"]
 font_size = 50
 
@@ -18,6 +20,7 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="Title Screen" type="CanvasLayer" unique_id=1303278956]
+script = ExtResource("1_v6p8y")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1947297351]
 anchors_preset = 15
@@ -92,7 +95,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2/PanelContainer/VBoxContainer" unique_id=708223937]
+[node name="Play" type="Button" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2/PanelContainer/VBoxContainer" unique_id=708223937]
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
@@ -103,7 +106,7 @@ text = "PLAY"
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2/PanelContainer/VBoxContainer" unique_id=1606512499]
+[node name="Quit" type="Button" parent="MarginContainer/Panel/HBoxContainer/VBoxContainer2/PanelContainer/VBoxContainer" unique_id=1606512499]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24

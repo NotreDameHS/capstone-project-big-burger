@@ -40,7 +40,7 @@ func money_removed(player_bet:float):
 
 func quota_check(clock : int):
 	timer_signal.emit(clock)
-	
+	print(clock)
 	if clock <= 0:
 		if money_amount <= quota:
 			print("game over")

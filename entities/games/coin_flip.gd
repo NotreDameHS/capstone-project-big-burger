@@ -22,6 +22,7 @@ func bet_outcome(choice) -> void:
 		print ("YOU LOSE!")
 
 func give_money() -> void:
+	pass
 	
 
 
