@@ -1,8 +1,13 @@
 extends Node2D
 
+signal coin_landed()
+
+var coin_flip_ui: Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
+	coin_flip_ui = get_node("../Coin Flip UI")
+	coin_flip_ui.coin_flip_mind.connect(coin_transfer)
 	pass # Replace with function body.
 
 
@@ -10,20 +15,19 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_timer_timeout() -> void:
-	pass # Replace with function body.
 
-func bet_outcome(choice) -> void:
+func coinflip():
 	var outcome := randi_range(0, 1)
-	if outcome == choice:
-		print("YOU WIN!")
-		give_money()
-	elif outcome != choice:
-		print ("YOU LOSE!")
+	if outcome == 1:
+		return false
+	elif outcome == 0:
+		return true
 
-func give_money() -> void:
-	pass
-	
+func coin_transfer():
+	var landed = coinflip()
+	print(landed)
+	coin_landed.emit(landed)
+
 
 
 # choose a random number ## var outcome = randi_range(0, 1)

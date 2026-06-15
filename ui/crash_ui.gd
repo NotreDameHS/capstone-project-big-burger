@@ -24,7 +24,7 @@ func _ready() -> void:
 	print(GameManager.money_amount)
 	await get_tree().process_frame
 	crash_delay()
-	player_input.text_submitted.connect(print_input)
+	player_input.text_changed.connect(print_input)
 	player_button.pressed.connect(start_game)
 
 func crash_delay():
@@ -35,7 +35,7 @@ func print_input(text: String):
 	var filter := ""
 	var dot_used := false
 	var valid = true
-	
+
 	for num in text:
 
 		if num.is_valid_float():
@@ -68,7 +68,7 @@ func print_input(text: String):
 	if value > GameManager.money_amount:
 		print("3")
 		player_input.text = ""
-		player_input.placeholder_text = "U Dont Have that Bruh"
+		player_input.placeholder_text = "Insuff Amount"
 		player_bet = 0.0
 		return
 	if game_started:

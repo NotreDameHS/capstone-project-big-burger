@@ -26,7 +26,6 @@ func stat():
 
 func _on_timer_timeout() -> void:
 	if start:
-		print("emit")
 		clock -= 1
 		if clock <= 0:
 			timer.emit(clock)

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://6mlha6kyg0b2"]
+
+[ext_resource type="PackedScene" uid="uid://ckjurih1kwxwq" path="res://ui/coin_flip_popup.tscn" id="1_efltp"]
+[ext_resource type="Script" uid="uid://d3lyd01lh0m3e" path="res://free_money.gd" id="2_dsexn"]
+
+[node name="Free Money" unique_id=1340101897 instance=ExtResource("1_efltp")]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("2_dsexn")

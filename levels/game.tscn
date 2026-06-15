@@ -3,10 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://crfbj1y5mxitk" path="res://levels/Background.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://dupoe8ugicht6" path="res://levels/game.gd" id="1_vhr6a"]
 [ext_resource type="PackedScene" uid="uid://wyw12odlrigd" path="res://entities/characters/player.tscn" id="2_e2o6t"]
-[ext_resource type="PackedScene" uid="uid://blemmmpkk5c3y" path="res://ui/UI.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" uid="uid://blemmmpkk5c3y" path="res://UI.tscn" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://cfl3a7vu3ubtb" path="res://ui/crash_game_popup.tscn" id="5_30w35"]
 [ext_resource type="PackedScene" uid="uid://ckjurih1kwxwq" path="res://ui/coin_flip_popup.tscn" id="6_cnc74"]
+[ext_resource type="AudioStream" uid="uid://cb1jrwjusqm6s" path="res://assets/audio/High quality, royalty free_ elevator music..mp3" id="6_kc1m6"]
 [ext_resource type="PackedScene" uid="uid://dknk7lmh63yx7" path="res://title_screen.tscn" id="7_vpik0"]
+[ext_resource type="PackedScene" uid="uid://6mlha6kyg0b2" path="res://free_money.tscn" id="8_arvxu"]
 
 [node name="Game" type="Node2D" unique_id=694441275]
 script = ExtResource("1_vhr6a")
@@ -31,10 +33,19 @@ autostart = true
 position = Vector2(961, 335)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1329757493]
+position = Vector2(733, 399)
+stream = ExtResource("6_kc1m6")
+volume_db = 1.0
+autoplay = true
+attenuation = 7.464247
 
 [node name="Coin Flip popup" parent="." unique_id=1717565407 instance=ExtResource("6_cnc74")]
 position = Vector2(370, 361)
 
 [node name="Title Screen" parent="." unique_id=1303278956 instance=ExtResource("7_vpik0")]
+
+[node name="Free Money" parent="." unique_id=684525539 instance=ExtResource("8_arvxu")]
+position = Vector2(1229, 32)
+scale = Vector2(0.1, 0.1)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

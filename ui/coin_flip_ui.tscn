@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://xgtaxogfk0fi"]
 
+[ext_resource type="Script" uid="uid://b4kslaj11270q" path="res://ui/coin_flip_ui.gd" id="1_pmymy"]
 [ext_resource type="Texture2D" uid="uid://dbaojne15lgpp" path="res://entities/games/Adobe Express - file.jpg" id="1_rt75r"]
 [ext_resource type="Texture2D" uid="uid://d05x5vhgama62" path="res://entities/games/elio.jpg" id="2_pmymy"]
 
@@ -19,6 +20,7 @@ bg_color = Color(0, 0.6431373, 0.13333334, 1)
 bg_color = Color(0.7647059, 0, 0, 1)
 
 [node name="Coin Flip UI" type="CanvasLayer" unique_id=762299749]
+script = ExtResource("1_pmymy")
 
 [node name="Panel" type="Panel" parent="." unique_id=1437083922]
 custom_minimum_size = Vector2(280, 300)
@@ -61,7 +63,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel" unique_id=1779924729]
+[node name="Title" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel" unique_id=1779924729]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 1.0
@@ -162,7 +164,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="LineEdit" type="LineEdit" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel3/HBoxContainer/VBoxContainer" unique_id=1527755103]
+[node name="BetAmount" type="LineEdit" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel3/HBoxContainer/VBoxContainer" unique_id=1527755103]
 custom_minimum_size = Vector2(140, -100)
 layout_mode = 2
 placeholder_text = "Set Amount"
@@ -173,7 +175,7 @@ virtual_keyboard_enabled = false
 custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel3/HBoxContainer/VBoxContainer" unique_id=597314244]
+[node name="StartAmount" type="Button" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer/Panel3/HBoxContainer/VBoxContainer" unique_id=597314244]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_pqx42")

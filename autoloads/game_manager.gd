@@ -12,7 +12,7 @@ var money_start : float = 200
 var money_amount : float
 var quota : float = 100
 var amount : float
-
+var round : int = 0
 func _ready() -> void:
 	money_amount = money_start
 	if game:
@@ -40,13 +40,16 @@ func money_removed(player_bet:float):
 
 func quota_check(clock : int):
 	timer_signal.emit(clock)
-	print(clock)
 	if clock <= 0:
 		if money_amount <= quota:
 			print("game over")
 			terminate_game.emit()
 		else:
+			round += 1
 			quota = money_amount * 1.2
-			print("round 2")
+			print("round " + str(round))
+		if round >= 5:
+			print("You Win")
+			terminate_game.emit()
 	pass
 	
